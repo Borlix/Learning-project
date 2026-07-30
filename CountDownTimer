@@ -1,0 +1,12 @@
+import time
+print("You have 10 sec to reset!")
+def countdown(seconds):
+    while seconds:
+        mins, secs = divmod(seconds, 60)
+        print(f"{mins:02d}:{secs:02d}", end="\r")
+        time.sleep(1)
+        seconds -= 1
+    print("Time's up! , Its show time!")
+
+# Example: Run a 10-second countdown
+countdown(10)
